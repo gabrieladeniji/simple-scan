@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tech104.isreal.simplescan.EthScanActivity">
+
+    <TextView
+        android:text="Ethereum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:layout_below="@+id/ethLogo"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/ethAddressEditText"
+        android:layout_toStartOf="@+id/button"
+        android:hint="0x" />
+
+    <Button
+        android:text="Scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ethAddressEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-5dp"
+        android:onClick="scanEthAddressFunction"
+        android:id="@+id/button" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/ethLogo"
+        app:srcCompat="@drawable/ethlogo"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:id="@+id/progressBarRound"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/resultMsgTextView"
+        android:textSize="12sp"
+        android:text="0xea0258D0E745620e77B0A389e3A656EFdb7Cf821"
+        android:layout_below="@+id/resultTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:text="Address is not valid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:id="@+id/resultTitleTextView"
+        android:textSize="20sp"
+        android:layout_below="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:visibility="invisible"
+        android:gravity="center_vertical" />
+</RelativeLayout>
